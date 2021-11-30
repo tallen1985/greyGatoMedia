@@ -6,6 +6,10 @@ const PORT = process.env.PORT || 3001;
 
 app.use(express.static('public'))
 
+app.get('/', (req, res) => {
+    res.send(path.join(__dirname, 'public/index.html'))
+})
+
 app.listen(PORT, () => {
     console.log(`Server started and ready at http://localhost:${PORT}`);
 })
