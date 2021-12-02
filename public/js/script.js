@@ -1,8 +1,10 @@
+
 const articles = document.getElementsByTagName('article');
 const navItems = document.getElementsByClassName('nav-link');
 const contactLink = document.getElementById('contactLink');
 const homeLink = document.getElementById('homeLink')
 const servicesLink = document.getElementById('servicesLink');
+const emailForm = document.getElementById('emailForm');
 
 let i = 0;
 const txt = 'Grey Gato Media'; /* The text */
@@ -35,6 +37,19 @@ function typeWriter() {
   }
 }
 
+emailForm.addEventListener('submit', (event) => {
+  event.preventDefault();
 
+  const email = document.getElementById('emailInput').value.trim();
+
+  console.log(email)
+  fetch('/api/email', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'text/plain',
+    },
+    body: email,
+  })
+});
 
 typeWriter();
