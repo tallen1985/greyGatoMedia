@@ -104,8 +104,8 @@
       </div>
     </article>
     <footer>
-      <p class="text-center">&copy 2022 - Grey Gato Media</p>
-      <?php echo "This is php" ?>
+      <p class="text-center">&copy <?php echo date("Y"); ?> - Grey Gato Media</p>
+    
     </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"
