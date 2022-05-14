@@ -30,13 +30,13 @@ article p {
     font-size: 2.5rem;
   }
 }
-.checkGuess {
+#checkGuess {
   padding: 0 30px;
   max-width: 1400px;
   display: flex;
   flex-direction: column;
 }
-.checkGuess .row {
+#checkGuess .row {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
