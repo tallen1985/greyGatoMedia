@@ -61,7 +61,25 @@ $result = $conn->query($sql);
             } else {
                 echo "0 results";
             }
-            $conn->close();
+        ?>
+
+        <form action="" method="post">
+            <label>Name: </label>
+            <input type="text" name="newName" id="newName" /> <br>
+
+            <label>Amount Guess: </label>
+            <input type="text" name="newGuess" id="newGuess" />
+
+            <input type="submit">Add Guess</input>
+        </form>
+
+        <?php
+            if (isset($_POST['submit'])) {
+                $newName = $_POST['newName'];
+                $newGuess = $_POST['newGuess'];
+
+                $sql = "INSERT INTO GUESSES(`name`, `guess`) VALUES ('$newName','$newGuess')";
+            }
         ?>
 
     </article>
