@@ -74,6 +74,7 @@ $result = $conn->query($sql);
         </form>
 
         <?php
+            echo $_POST;
             if (isset($_POST['submit'])) {
                 $newName = $_POST['newName'];
                 $newGuess = $_POST['newGuess'];
