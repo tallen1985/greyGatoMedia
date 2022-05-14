@@ -74,21 +74,11 @@ $result = $conn->query($sql);
         </form>
 
         <?php
-            echo $_POST;
             $newName = $_POST['newName'];
             $newGuess = $_POST['newGuess'];
 
-            $sql = "INSERT INTO 'GUESSES'(`name`, `guess`) VALUES ('$newName','$newGuess')";
+            $sql = "INSERT INTO `GUESSES`(`name`, `guess`) VALUES ('$newName','$newGuess')";
             $result = $conn->query($sql);
-            if ($result == TRUE) {
-
-                echo "New record created successfully.";
-            
-                }else{
-            
-                echo "Error:". $sql . "<br>". $conn->error;
-            
-                } 
         ?>
 
     </article>
