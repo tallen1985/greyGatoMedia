@@ -63,14 +63,14 @@ $result = $conn->query($sql);
             }
         ?>
 
-        <form action="" method="post">
+        <form action="" method="POST">
             <label>Name: </label>
             <input type="text" name="newName" id="newName" /> <br>
 
             <label>Amount Guess: </label>
             <input type="text" name="newGuess" id="newGuess" />
 
-            <input type="submit">Add Guess</input>
+            <input type="submit" value="Add Guess"></input>
         </form>
 
         <?php
@@ -78,7 +78,7 @@ $result = $conn->query($sql);
                 $newName = $_POST['newName'];
                 $newGuess = $_POST['newGuess'];
 
-                $sql = "INSERT INTO GUESSES(`name`, `guess`) VALUES ('$newName','$newGuess')";
+                $sql = "INSERT INTO 'GUESSES'(`name`, `guess`) VALUES ('$newName','$newGuess')";
                 $result = $conn->query($sql);
                 if ($result == TRUE) {
 
