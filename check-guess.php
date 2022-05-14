@@ -75,22 +75,20 @@ $result = $conn->query($sql);
 
         <?php
             echo $_POST;
-            if (isset($_POST['submit'])) {
-                $newName = $_POST['newName'];
-                $newGuess = $_POST['newGuess'];
+            $newName = $_POST['newName'];
+            $newGuess = $_POST['newGuess'];
 
-                $sql = "INSERT INTO 'GUESSES'(`name`, `guess`) VALUES ('$newName','$newGuess')";
-                $result = $conn->query($sql);
-                if ($result == TRUE) {
+            $sql = "INSERT INTO 'GUESSES'(`name`, `guess`) VALUES ('$newName','$newGuess')";
+            $result = $conn->query($sql);
+            if ($result == TRUE) {
 
-                    echo "New record created successfully.";
-              
-                  }else{
-              
-                    echo "Error:". $sql . "<br>". $conn->error;
-              
-                  } 
-            }
+                echo "New record created successfully.";
+            
+                }else{
+            
+                echo "Error:". $sql . "<br>". $conn->error;
+            
+                } 
         ?>
 
     </article>
