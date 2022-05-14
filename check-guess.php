@@ -4,16 +4,6 @@ include 'databaseConnect.php';
 $sql = "SELECT * FROM GUESSES";
 $result = $conn->query($sql);
 
-if ($result->num_rows > 0) {
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-      echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
-    }
-  } else {
-    echo "0 results";
-  }
-  $conn->close();
-  ?>
 ?>
 
 <!DOCTYPE html>
@@ -60,6 +50,19 @@ if ($result->num_rows > 0) {
         <h1 id="headerText" class="text-light m-3 p-3"></h1>
     </div>
     <article id="checkGuess">
+        <h2>Let's Play "Guess Ann's check this month!"</h2>
+        <p>Current Guesses</p>
+        <?php
+        if ($result->num_rows > 0) {
+                // output data of each row
+                while($row = $result->fetch_assoc()) {
+                    echo "<div class='row'><p>Name: $row['name']</p><p>Guess: $row['guess']</p></div>';
+                }
+            } else {
+                echo "0 results";
+            }
+            $conn->close();
+        ?>
 
     </article>
     <article id="contactSection" class="col-sm-11 col-md-10 mx-auto my-3 px-3">
