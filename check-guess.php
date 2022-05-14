@@ -79,6 +79,7 @@ $result = $conn->query($sql);
 
             $sql = "INSERT INTO `GUESSES`(`name`, `guess`) VALUES ('$newName','$newGuess')";
             $result = $conn->query($sql);
+            $conn->close();
         ?>
 
     </article>
