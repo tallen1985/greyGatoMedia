@@ -56,7 +56,7 @@ $result = $conn->query($sql);
         if ($result->num_rows > 0) {
                 // output data of each row
                 while($row = $result->fetch_assoc()) {
-                    echo "<div class='row'><p>Name: $row['name']</p><p>Guess: $row['guess']</p></div>'";
+                    echo '<div class="row"><p>Name: '.$row['name'].'</p><p>Guess: '.$row['guess'].'</p></div>';
                 }
             } else {
                 echo "0 results";
