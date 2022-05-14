@@ -5,7 +5,6 @@
   background-size: 100%;
   filter: sepia(50%);
 }
-
 #topSection #headerText {
   position: absolute;
   bottom: 25px;
@@ -30,15 +29,15 @@ article p {
     font-size: 2.5rem;
   }
 }
+
 .checkGuess {
   padding: 0 30px;
   max-width: 1400px;
   display: flex;
   flex-direction: column;
-}
-.checkGuess .row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
 
-/*# sourceMappingURL=style.css.map */
+  .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
