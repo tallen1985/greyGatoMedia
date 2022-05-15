@@ -1,6 +1,16 @@
 <?php 
 include 'databaseConnect.php';
 
+if (isset($_POST['submitBtn'])) {
+    $newName = $_POST['newName'];
+    $newGuess = $_POST['newGuess'];
+
+    $sql = "INSERT INTO `GUESSES`(`name`, `guess`) VALUES ('$newName','$newGuess')";
+    $result = $conn->query($sql);
+    $conn->close();
+}
+            
+
 $sql = "SELECT * FROM GUESSES";
 $result = $conn->query($sql);
 
@@ -70,17 +80,10 @@ $result = $conn->query($sql);
             <label>Amount Guess: </label>
             <input type="text" name="newGuess" id="newGuess" />
 
-            <input type="submit" value="Add Guess"></input>
+            <input type="submit" name="submitBtn" value="Add Guess"></input>
         </form>
 
-        <?php
-            $newName = $_POST['newName'];
-            $newGuess = $_POST['newGuess'];
 
-            $sql = "INSERT INTO `GUESSES`(`name`, `guess`) VALUES ('$newName','$newGuess')";
-            $result = $conn->query($sql);
-            $conn->close();
-        ?>
 
     </article>
     <article id="contactSection" class="col-sm-11 col-md-10 mx-auto my-3 px-3">
