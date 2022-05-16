@@ -1,3 +1,47 @@
+<?php 
+// include 'databaseConnect.php';
+
+function decideMonth ($currentDate) {
+    $currentMonth = date('m');
+    if ($currentDate > 15) {
+        $currentMonth++;
+    } 
+
+    
+  
+// Use mktime() and date() function to
+// convert number to month name
+    return date("F", mktime(0, 0, 0, $currentMonth, 10));
+  
+}
+
+if (isset($_POST['submitBtn'])) {
+    $newName = $_POST['newName'];
+    $newGuess = $_POST['newGuess'];
+    $drawingMonth = decideMonth(date('d'));
+
+    echo $newName . $newGuess . $drawingMonth;
+
+    $sql = "INSERT INTO `GUESSES`(`drawingMonth`,`name`, `guess`) VALUES ('$drawingMonth','$newName','$newGuess')";
+    $result = $conn->query($sql);
+
+    if ($result) {
+        echo "added successfully";
+    } else {
+        echo "error"
+    }
+    
+}
+            
+
+$sql = "SELECT * FROM GUESSES";
+$result = $conn->query($sql);
+
+    echo $result;
+    
+$conn->close();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -42,10 +86,8 @@
         <h1 id="headerText" class="text-light m-3 p-3"></h1>
     </div>
     <article id="checkGuess">
-        <h2>Let's Play "Guess Ann's check this month!"</h2>
-        <p>Current Guesses</p>
 
-        <form action="insert.php" method="POST">
+        <form action="" method="POST">
             <label>Name: </label>
             <input type="text" name="newName" id="newName" /> <br>
 
@@ -54,6 +96,8 @@
 
             <input type="submit" name="submitBtn" value="Add Guess"></input>
         </form>
+
+
 
     </article>
     <article id="contactSection" class="col-sm-11 col-md-10 mx-auto my-3 px-3">
