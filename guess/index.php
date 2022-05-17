@@ -1,4 +1,4 @@
-<?php include '/header.php'; ?>
+<?php include '../header.php'; ?>
 <div id="topSection" class="container-fluid">
     <h1 id="headerText" class="text-light m-3 p-3"></h1>
     <div class="guessSection">
@@ -51,4 +51,4 @@
         </form>
     </div>
 </article>
-<?php include_once '/footer.php'; ?>
+<?php include_once '../footer.php'; ?>

@@ -1,5 +1,7 @@
 <?php 
 include 'databaseConnect.php';
+include '../header.php';
+echo 'got this far';
 
 function decideMonth ($currentDate) {
     $currentMonth = date('m');
@@ -26,7 +28,7 @@ if (isset($_POST['submitBtn'])) {
 }
 
 $conn->close();
-include_once '/header.php';
+
 ?>
 
 
@@ -66,4 +68,4 @@ include_once '/header.php';
         </form>
     </div>
 </article>
-<?php include_once '/footer.php'; ?>
+<?php include_once '../footer.php'; ?>

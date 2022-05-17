@@ -10,8 +10,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@700&display=swap" rel="stylesheet" />
-    <link rel="shortcut icon" type="image/jpg" href="./img/favicon.ico" />
-    <link href="./css/style.css" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/jpg" href="/img/favicon.ico" />
+    <link href="/css/style.css" rel="stylesheet" />
     <title>Grey Gato Media</title>
 </head>
 
