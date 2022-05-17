@@ -30,15 +30,55 @@ article p {
     font-size: 2.5rem;
   }
 }
-#checkGuess {
-  padding: 0 30px;
+.guessSection {
+  display: none;
   max-width: 1400px;
-  display: flex;
-  flex-direction: column;
   margin: 0 auto;
+  padding: 2em 30px;
+  background-color: white;
+  border-radius: 15px;
+  width: 40%;
+  min-width: 250px;
+  position: absolute;
+  top: 10%;
+  left: 55%;
+  justify-content: center;
+  flex-wrap: wrap;
   text-align: center;
 }
-#checkGuess .row {
+@media screen and (min-width: 900px) {
+  .guessSection {
+    display: flex;
+  }
+}
+.guessSection form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 15px;
+  text-align: right;
+}
+
+.guessSectionMobile {
+  display: flex;
+  padding: 1em 30px;
+  text-align: center;
+}
+@media screen and (min-width: 900px) {
+  .guessSectionMobile {
+    display: none;
+  }
+}
+.guessSectionMobile div {
+  padding: 1em;
+}
+.guessSectionMobile div label,
+.guessSectionMobile div input {
+  margin: 0 1em;
+}
+
+.row {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }

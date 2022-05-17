@@ -1,5 +1,5 @@
 <?php 
-// include 'databaseConnect.php';
+include 'databaseConnect.php';
 
 function decideMonth ($currentDate) {
     $currentMonth = date('m');
@@ -20,25 +20,11 @@ if (isset($_POST['submitBtn'])) {
     $newGuess = $_POST['newGuess'];
     $drawingMonth = decideMonth(date('d'));
 
-    echo $newName . $newGuess . $drawingMonth;
-
     $sql = "INSERT INTO `GUESSES`(`drawingMonth`,`name`, `guess`) VALUES ('$drawingMonth','$newName','$newGuess')";
     $result = $conn->query($sql);
-
-    if ($result) {
-        echo "added successfully";
-    } else {
-        echo "error"
-    }
     
 }
-            
 
-$sql = "SELECT * FROM GUESSES";
-$result = $conn->query($sql);
-
-    echo $result;
-    
 $conn->close();
 ?>
 
@@ -84,22 +70,21 @@ $conn->close();
     </nav>
     <div id="topSection" class="container-fluid">
         <h1 id="headerText" class="text-light m-3 p-3"></h1>
+        <div class="guessSection">
+            <h2><?php echo ($result) ? "Congrats $newName, your guess was added for $drawingMonth." : "Unfortunately Someone already guessed that amount"; ?>
+            </h2>
+            <?php if (!$result) {
+                echo "<a href='/guess'>Try Again</a>";
+            } ?>
+        </div>
     </div>
-    <article id="checkGuess">
-
-        <form action="" method="POST">
-            <label>Name: </label>
-            <input type="text" name="newName" id="newName" /> <br>
-
-            <label>Amount Guess: </label>
-            <input type="text" name="newGuess" id="newGuess" />
-
-            <input type="submit" name="submitBtn" value="Add Guess"></input>
-        </form>
-
-
-
-    </article>
+    <div class="guessSectionMobile">
+            <h2><?php echo ($result) ? "Congrats $newName, your guess was added for $drawingMonth." : "Unfortunately Someone already guessed that amount"; ?>
+            </h2>
+            <?php if (!$result) {
+                echo "<a href='/guess'>Try Again</a>";
+            } ?>
+        </div>
     <article id="contactSection" class="col-sm-11 col-md-10 mx-auto my-3 px-3">
         <h3>Get Ahold of Us</h3>
         <div id="contactBox" class="col-sm-10 col-md-9 mx-auto d-flex flex-row flex-wrap justify-content-evenly">
