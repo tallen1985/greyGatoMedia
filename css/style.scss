@@ -71,6 +71,10 @@ article p {
     flex-direction: column;
     justify-content: center;
     text-align: right;
+    row-gap: 15px input {
+      padding: 0.5em;
+      border-radius: 10px;
+    }
   }
 }
 
