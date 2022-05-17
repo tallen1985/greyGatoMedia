@@ -6,10 +6,9 @@ const servicesLink = document.getElementById("servicesLink");
 const emailForm = document.getElementById("emailForm");
 
 let i = 0;
+let txt = "Grey Gato Media";
 if (document.getElementById("headerText").classList.contains("guess")) {
-  const txt = "Closest to the Pole!";
-} else {
-  const txt = "Grey Gato Media"; /* The text */
+  txt = "Closest to the Pole!";
 }
 
 const speed = 50;
