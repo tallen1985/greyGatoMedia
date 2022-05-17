@@ -1,4 +1,6 @@
 #topSection {
+  max-width: 1400px;
+  margin: 0 auto;
   position: relative;
   height: 40vw;
   background-image: url("../img/background.jpeg");
@@ -24,6 +26,8 @@
 }
 
 article p {
+  max-width: 1400px;
+  margin: 0 auto;
   width: 90%;
   margin: 5px auto;
 }
@@ -69,6 +73,8 @@ article p {
 }
 
 .guessSectionMobile {
+  max-width: 1400px;
+  margin: 0 auto;
   display: flex;
   padding: 1em 30px;
   text-align: center;
