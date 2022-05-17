@@ -34,11 +34,6 @@
         <div class="text-center">
             <p>Email: <a href="mailto:jake@greygato.com">Jake@greygato.com</a></p>
         </div>
-        <form class="text-center" id="emailForm">
-            <label for="emailInput">Enter Email to Stay up to date!:</label><br />
-            <input type="email" name="emailInput" id="emailInput" />
-            <input type="submit" id="emailSubmit" class="btn btn-primary my-3" />
-        </form>
     </div>
 </article>
 <?php include_once 'footer.php'; ?>
