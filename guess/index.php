@@ -1,8 +1,7 @@
 <?php include '../header.php'; ?>
 <div id="topSection" class="container-fluid">
-    <h1 id="headerText" class="text-light m-3 p-3"></h1>
+    <h1 id="headerText" class="text-light m-3 p-3 guess"></h1>
     <div class="guessSection">
-        <h2>Let's Play "Guess Ann's check this month!"</h2>
 
         <form action="insert.php" method="POST">
             <div>
@@ -18,7 +17,6 @@
     </div>
 </div>
 <div class="guessSectionMobile">
-    <h2>Let's Play "Guess Ann's check this month!"</h2>
 
     <form action="insert.php" method="POST">
         <div>

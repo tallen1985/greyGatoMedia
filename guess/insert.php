@@ -32,8 +32,8 @@ $conn->close();
 ?>
 
 
-<div id="topSection" class="container-fluid">
-    <h1 id="headerText" class="text-light m-3 p-3"></h1>
+<div id="topSection guess" class="container-fluid">
+    <h1 id="headerText" class="text-light m-3 p-3 guess"></h1>
     <div class="guessSection">
         <h2><?php echo ($result) ? "Congrats $newName, your guess was added for $drawingMonth." : "Unfortunately Someone already guessed that amount"; ?>
         </h2>
