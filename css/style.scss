@@ -73,8 +73,8 @@ article p {
     text-align: right;
     row-gap: 15px;
     input {
-      padding: 0.5em;
-      border-radius: 10px;
+      padding: 0.25em;
+      border-radius: 5px;
     }
   }
 }
@@ -92,6 +92,12 @@ article p {
     label,
     input {
       margin: 0 1em;
+    }
+  }
+  form {
+    input {
+      padding: 0.25em;
+      border-radius: 5px;
     }
   }
 }

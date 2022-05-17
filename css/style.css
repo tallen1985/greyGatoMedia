@@ -60,8 +60,8 @@ article p {
   row-gap: 15px;
 }
 .guessSection form input {
-  padding: 0.5em;
-  border-radius: 10px;
+  padding: 0.25em;
+  border-radius: 5px;
 }
 
 .guessSectionMobile {
@@ -81,6 +81,10 @@ article p {
 .guessSectionMobile div label,
 .guessSectionMobile div input {
   margin: 0 1em;
+}
+.guessSectionMobile form input {
+  padding: 0.25em;
+  border-radius: 5px;
 }
 
 .row {
