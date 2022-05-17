@@ -86,6 +86,7 @@ article p {
   margin: 0 1em;
 }
 .guessSectionMobile form {
+  margin: 0 auto;
   text-align: center;
 }
 .guessSectionMobile form input {
