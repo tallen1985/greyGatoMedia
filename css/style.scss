@@ -18,6 +18,9 @@
   position: relative;
   height: 40vw;
   background-image: url("../img/background.jpeg");
+  &.guess {
+    background-image: url("/guess/oil.jpeg");
+  }
   background-size: 100%;
   filter: sepia(50%);
 }

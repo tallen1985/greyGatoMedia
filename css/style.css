@@ -5,6 +5,9 @@
   background-size: 100%;
   filter: sepia(50%);
 }
+#topSection.guess {
+  background-image: url("/guess/oil.jpeg");
+}
 
 #topSection #headerText {
   position: absolute;
