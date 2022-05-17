@@ -57,9 +57,11 @@ article p {
   flex-direction: column;
   justify-content: center;
   text-align: right;
-  row-gap: 15px input;
-  row-gap-padding: 0.5em;
-  row-gap-border-radius: 10px;
+  row-gap: 15px;
+}
+.guessSection form input {
+  padding: 0.5em;
+  border-radius: 10px;
 }
 
 .guessSectionMobile {
