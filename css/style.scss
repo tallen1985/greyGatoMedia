@@ -72,6 +72,7 @@ article p {
     justify-content: center;
     text-align: right;
     row-gap: 15px;
+    margin: 0 auto;
     input {
       padding: 0.25em;
       border-radius: 5px;
@@ -84,17 +85,20 @@ article p {
   padding: 1em 30px;
   text-align: center;
   align-items: center;
+  margin: 0 auto;
   @include tablet {
     display: none;
   }
   div {
     padding: 1em;
+    text-align: right;
     label,
     input {
       margin: 0 1em;
     }
   }
   form {
+    text-align: center;
     input {
       padding: 0.25em;
       border-radius: 5px;
