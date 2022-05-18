@@ -68,7 +68,7 @@ if (isset($_POST['submitBtn'])) {
             if ($result->num_rows > 0) {
                 // output data of each row
                 while($row = $result->fetch_assoc()) {
-                    echo '<h2>Current Entries</h2><div class="anne"><p>'.$row["drawingMonth"].'</p><p>'.$row["name"].'</p><p>'.$row["guess"].'</p></div>';
+                    echo '<div class="anne"><p>'.$row["drawingMonth"].'</p><p>'.$row["name"].'</p><p>'.$row["guess"].'</p></div>';
                 }
                 
             } else {
