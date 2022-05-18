@@ -71,6 +71,10 @@ article p {
   padding: 0.25em;
   border-radius: 5px;
 }
+.guessSection.anne {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
 
 .guessSectionMobile {
   max-width: 1400px;
@@ -101,6 +105,10 @@ article p {
 .guessSectionMobile form input {
   padding: 0.25em;
   border-radius: 5px;
+}
+.guessSectionMobile.anne {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .anne {
