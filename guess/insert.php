@@ -1,8 +1,8 @@
 <?php 
 include 'databaseConnect.php';
 include '../header.php';
-echo 'got this far';
 
+$anne = false;
 function decideMonth ($currentDate) {
     $currentMonth = date('m');
     if ($currentDate > 15) {
@@ -17,37 +17,63 @@ function decideMonth ($currentDate) {
   
 }
 
+
+
 if (isset($_POST['submitBtn'])) {
     $newName = $_POST['newName'];
     $newGuess = $_POST['newGuess'];
     $drawingMonth = decideMonth(date('d'));
-
+    
+    if (($newName == 'anne') && ($newGuess == 'thomas')) {
+        $anne = true;
+        $sql = "SELECT * FROM GUESSES WHERE drawingMonth='$drawingMonth'";
+        $result = $conn->query($sql);
+        $resultMobile = $result;
+        
+    } else {
+        
     $sql = "INSERT INTO `GUESSES`(`drawingMonth`,`name`, `guess`) VALUES ('$drawingMonth','$newName','$newGuess')";
     $result = $conn->query($sql);
     
+    }
+    
 }
-
-$conn->close();
 
 ?>
 
 
-<div id="topSection guess" class="container-fluid guess">
+<div id="topSection" class="container-fluid guess">
     <h1 id="headerText" class="text-light m-3 p-3 guess"></h1>
-    <div class="guessSection">
-        <h2><?php echo ($result) ? "Congrats $newName, your guess was added for $drawingMonth." : "Unfortunately Someone already guessed that amount"; ?>
-        </h2>
-        <?php if (!$result) {
-                echo "<a href='/guess'>Try Again</a>";
-            } ?>
+    <div class="guessSection <?php echo ($anne) ?: 'anne' ?>">
+        <?php if ($anne) {
+            if ($result->num_rows > 0) {
+                // output data of each row
+                while($row = $result->fetch_assoc()) {
+                    echo '<p>'.$row["drawingMonth"].'</p><p>'.$row["name"].'</p><p> Guess: '.$row["guess"].'</p>';
+                }
+                mysqli_data_seek($result ,0);
+            } else {
+                echo "0 results";
+            }
+        } else { 
+            echo ($result) ? "<h2>Congrats $newName, your guess was added for $drawingMonth." : "Unfortunately Someone already guessed that amount</h2><a href='/guess'>Try Again</a>";
+        } ?>
     </div>
 </div>
-<div class="guessSectionMobile">
-    <h2><?php echo ($result) ? "Congrats $newName, your guess was added for $drawingMonth." : "Unfortunately Someone already guessed that amount"; ?>
-    </h2>
-    <?php if (!$result) {
-                echo "<a href='/guess'>Try Again</a>";
-            } ?>
+<div class="guessSectionMobile <?php echo ($anne) ?: 'anne' ?>">
+    <?php if ($anne) {
+            if ($result->num_rows > 0) {
+                // output data of each row
+                while($row = $result->fetch_assoc()) {
+                    echo "Month: " . $row["drawingMonth"]. " - Name: " . $row["name"]. " Guess: " . $row["guess"]. "<br>";
+                }
+                
+            } else {
+                echo "0 results";
+            }
+        } else { 
+            echo ($result) ? "<h2>Congrats $newName, your guess was added for $drawingMonth." : "Unfortunately Someone already guessed that amount</h2><a href='/guess'>Try Again</a>";
+        } ?>
 </div>
 <article id="contactSection" class="col-sm-11 col-md-10 mx-auto my-3 px-3">
     <h3>Get Ahold of Us</h3>
