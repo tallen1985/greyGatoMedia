@@ -49,7 +49,7 @@ if (isset($_POST['submitBtn'])) {
             if ($result->num_rows > 0) {
                 // output data of each row
                 while($row = $result->fetch_assoc()) {
-                    echo '<p>'.$row["drawingMonth"].'</p><p>'.$row["name"].'</p><p> Guess: '.$row["guess"].'</p>';
+                    echo '<div class="anne"<p>'.$row["drawingMonth"].'</p><p>'.$row["name"].'</p><p> Guess: '.$row["guess"].'</p></div>';
                 }
                 mysqli_data_seek($result ,0);
             } else {
@@ -60,12 +60,12 @@ if (isset($_POST['submitBtn'])) {
         } ?>
     </div>
 </div>
-<div class="guessSectionMobile <?php echo ($anne) ? 'anne' : ' ' ?>">
+<div class="guessSectionMobile">
     <?php if ($anne) {
             if ($result->num_rows > 0) {
                 // output data of each row
                 while($row = $result->fetch_assoc()) {
-                    echo '<p>'.$row["drawingMonth"].'</p><p>'.$row["name"].'</p><p> Guess: '.$row["guess"].'</p>';
+                    echo '<div class="anne"<p>'.$row["drawingMonth"].'</p><p>'.$row["name"].'</p><p> Guess: '.$row["guess"].'</p></div>';
                 }
                 
             } else {
