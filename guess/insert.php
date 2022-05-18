@@ -46,7 +46,7 @@ if (isset($_POST['submitBtn'])) {
     <h1 id="headerText" class="text-light m-3 p-3 guess"></h1>
     <div class="guessSection">
         <?php if ($anne) {
-            echo '<h2>Current Entries</h2>';
+            echo '<h2 style="width:100%;">Current Entries</h2>';
             if ($result->num_rows > 0) {
                 // output data of each row
                 while($row = $result->fetch_assoc()) {
@@ -64,7 +64,7 @@ if (isset($_POST['submitBtn'])) {
 </div>
 <div class="guessSectionMobile">
     <?php if ($anne) {
-        echo '<h2 style="width: 100%;">Current Entries</h2>';
+        echo '<h2>Current Entries</h2>';
             if ($result->num_rows > 0) {
                 // output data of each row
                 while($row = $result->fetch_assoc()) {
