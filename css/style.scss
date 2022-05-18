@@ -94,7 +94,8 @@ article p {
   display: flex;
   padding: 1em 30px;
   text-align: center;
-  align-items: center;
+  align-items: stretch;
+  flex-direction: column;
   margin: 0 auto;
   @include tablet {
     display: none;
