@@ -24,7 +24,7 @@ if (isset($_POST['submitBtn'])) {
     $newGuess = $_POST['newGuess'];
     $drawingMonth = decideMonth(date('d'));
     
-    if (($newName == 'anne') && ($newGuess == 'thomas')) {
+    if ((strtolower($newName) == 'anne') && (strtolower($newGuess) == 'thomas')) {
         $anne = true;
         $sql = "SELECT * FROM GUESSES WHERE drawingMonth='$drawingMonth'";
         $result = $conn->query($sql);
@@ -64,16 +64,17 @@ if (isset($_POST['submitBtn'])) {
 </div>
 <div class="guessSectionMobile">
     <?php if ($anne) {
-        echo '<h2>Current Entries</h2>';
+        echo '<h2>Current Entries</h2><div class="anne">';
             if ($result->num_rows > 0) {
                 // output data of each row
                 while($row = $result->fetch_assoc()) {
-                    echo '<div class="anne"><p>'.$row["drawingMonth"].'</p><p>'.$row["name"].'</p><p>'.$row["guess"].'</p></div>';
+                    echo '<p>'.$row["drawingMonth"].'</p><p>'.$row["name"].'</p><p>'.$row["guess"].'</p>';
                 }
                 
             } else {
                 echo "0 results";
             }
+            echo '</div>'
         } else { 
             echo ($result) ? "<h2>Congrats $newName, your guess was added for $drawingMonth." : "Unfortunately Someone already guessed that amount</h2><a href='/guess'>Try Again</a>";
         } ?>

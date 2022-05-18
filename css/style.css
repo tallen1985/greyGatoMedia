@@ -79,11 +79,9 @@ article p {
 .guessSectionMobile {
   max-width: 1400px;
   margin: 0 auto;
-  display: flex;
+  display: grid;
   padding: 1em 30px;
   text-align: center;
-  align-items: stretch;
-  flex-direction: column;
   margin: 0 auto;
 }
 @media screen and (min-width: 900px) {
