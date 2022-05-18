@@ -44,7 +44,7 @@ if (isset($_POST['submitBtn'])) {
 
 <div id="topSection" class="container-fluid guess">
     <h1 id="headerText" class="text-light m-3 p-3 guess"></h1>
-    <div class="guessSection <?php echo ($anne) ? 'anne' : ' ' ?>">
+    <div class="guessSection">
         <?php if ($anne) {
             if ($result->num_rows > 0) {
                 // output data of each row
