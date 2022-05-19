@@ -104,18 +104,19 @@ article p {
 .guessSectionMobile div input {
   margin: 0 1em;
 }
-.guessSectionMobile form {
-  margin: 0 auto;
-  text-align: center;
-}
-.guessSectionMobile form input {
-  padding: 0.25em;
-  border-radius: 5px;
-}
-.guessSectionMobile.anne {
+.guessSectionMobile div.anne {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   text-align: center;
+}
+
+form {
+  margin: 0 auto;
+  text-align: center;
+}
+form input {
+  padding: 0.25em;
+  border-radius: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */

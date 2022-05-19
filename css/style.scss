@@ -112,18 +112,18 @@ article p {
     input {
       margin: 0 1em;
     }
-  }
-  form {
-    margin: 0 auto;
-    text-align: center;
-    input {
-      padding: 0.25em;
-      border-radius: 5px;
+    &.anne {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      text-align: center;
     }
   }
-  &.anne {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    text-align: center;
+}
+form {
+  margin: 0 auto;
+  text-align: center;
+  input {
+    padding: 0.25em;
+    border-radius: 5px;
   }
 }
