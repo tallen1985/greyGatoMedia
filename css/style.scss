@@ -32,9 +32,14 @@ a {
   filter: sepia(50%);
 }
 #topSection #headerText {
-  position: absolute;
-  bottom: 25px;
-  left: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include tablet {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+  }
   font-size: 3rem;
   font-family: "Arvo", serif;
   color: purple;
