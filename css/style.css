@@ -69,7 +69,7 @@ article p {
 }
 @media screen and (min-width: 900px) {
   .guessSection {
-    display: flex;
+    display: grid;
   }
 }
 .guessSection form {
@@ -85,7 +85,7 @@ article p {
   padding: 0.25em;
   border-radius: 5px;
 }
-.guessSection.anne {
+.guessSection .anne {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }

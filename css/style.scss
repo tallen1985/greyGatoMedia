@@ -67,7 +67,7 @@ article p {
   background-color: purple;
   color: white;
   @include tablet {
-    display: flex;
+    display: grid;
   }
   @include max-wrap();
   padding: 2em 30px;
@@ -95,7 +95,7 @@ article p {
       border-radius: 5px;
     }
   }
-  &.anne {
+  .anne {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
