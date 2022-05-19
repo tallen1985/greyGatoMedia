@@ -14,7 +14,7 @@ a {
   filter: sepia(50%);
 }
 #topSection.guess {
-  background-image: url("/guess/oil.jpeg");
+  background-image: url("/guess/3-kern-river-oil-field-ca-1910.jpeg");
 }
 
 #topSection #headerText {
