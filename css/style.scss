@@ -31,7 +31,7 @@
   left: 25px;
   font-size: 3rem;
   font-family: "Arvo", serif;
-  color: whitesmoke;
+  color: purple;
   text-shadow: 1px 1px darkslategray;
 }
 
@@ -53,13 +53,14 @@ article p {
 
 .guessSection {
   display: none;
+  background-color: purple;
+  color: white;
   @include tablet {
     display: flex;
   }
   @include max-wrap();
   padding: 2em 30px;
 
-  background-color: white;
   border-radius: 15px;
   width: 40%;
   min-width: 250px;

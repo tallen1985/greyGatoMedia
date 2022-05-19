@@ -58,7 +58,7 @@ if (isset($_POST['submitBtn'])) {
                 echo "0 results";
             }
         } else { 
-            echo ($result) ? "<h2>Congrats $newName, your guess was added for $drawingMonth." : "Unfortunately Someone already guessed that amount</h2><a href='/guess'>Try Again</a>";
+            echo ($result) ? "<h2>Congrats $newName, your guess was added for $drawingMonth." : "Unfortunately either something went wrong... or someone already guessed that amount</h2><p><a href='/guess'>Try Again</a></p>";
         } ?>
     </div>
 </div>
@@ -74,9 +74,9 @@ if (isset($_POST['submitBtn'])) {
             } else {
                 echo "0 results";
             }
-            echo '</div>'
+            echo '</div>';
         } else { 
-            echo ($result) ? "<h2>Congrats $newName, your guess was added for $drawingMonth." : "Unfortunately Someone already guessed that amount</h2><a href='/guess'>Try Again</a>";
+            echo ($result) ? "<h2>Congrats $newName, your guess was added for $drawingMonth." : "Unfortunately either something went wrong... or someone already guessed that amount</h2><p><a href='/guess'>Try Again</a></p>";
         } ?>
 </div>
 <article id="contactSection" class="col-sm-11 col-md-10 mx-auto my-3 px-3">
