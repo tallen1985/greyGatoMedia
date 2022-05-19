@@ -66,9 +66,9 @@ if (isset($_POST['submitBtn'])) {
     <?php if ($anne) {
         echo '<h2>Current Entries</h2>
                 <div class="anne">
-                    <p>Month</p>
-                    <p>Name</p>
-                    <p>Amount</p>';
+                    <h3>Month</h3>
+                    <h3>Name</h3>
+                    <h3>Amount</h3>';
             if ($result->num_rows > 0) {
                 // output data of each row
                 while($row = $result->fetch_assoc()) {
