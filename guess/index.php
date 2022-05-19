@@ -1,6 +1,6 @@
 <?php include '../header.php'; ?>
 <div id="topSection" class="container-fluid guess">
-    <h1 id="headerText" class="text-light m-3 p-3 guess"></h1>
+    <h1 id="headerText" class="m-3 p-3 guess"></h1>
     <div class="guessSection">
 
         <form action="insert.php" method="POST">
