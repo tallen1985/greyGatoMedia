@@ -1,4 +1,5 @@
 <?php 
+$pageTitle = 'Closest to the Pole!'
 include 'databaseConnect.php';
 include '../header.php';
 

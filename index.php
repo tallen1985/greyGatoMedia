@@ -1,4 +1,6 @@
-<?php include_once 'header.php'; ?>
+<?php 
+$pageTitle = "Home";
+include_once 'header.php'; ?>
 <div id="topSection" class="container-fluid">
     <h1 id="headerText" class="text-light m-3 p-3"></h1>
 </div>
