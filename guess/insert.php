@@ -65,6 +65,7 @@ if (isset($_POST['submitBtn'])) {
         } ?>
     </div>
 </div>
+</div>
 <div class="guessSectionMobile">
     <?php if ($anne) {
         echo '<h2>Current Entries</h2>
