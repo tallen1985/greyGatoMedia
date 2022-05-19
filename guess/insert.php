@@ -64,7 +64,11 @@ if (isset($_POST['submitBtn'])) {
 </div>
 <div class="guessSectionMobile">
     <?php if ($anne) {
-        echo '<h2>Current Entries</h2><div class="anne">';
+        echo '<h2>Current Entries</h2>
+                <div class="anne">
+                    <p>Month</p>
+                    <p>Name</p>
+                    <p>Amount</p>';
             if ($result->num_rows > 0) {
                 // output data of each row
                 while($row = $result->fetch_assoc()) {
