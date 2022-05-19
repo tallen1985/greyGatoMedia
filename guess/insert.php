@@ -46,12 +46,15 @@ if (isset($_POST['submitBtn'])) {
     <h1 id="headerText" class=" m-3 p-3 guess"></h1>
     <div class="guessSection">
         <?php if ($anne) {
-            echo '<h2 style="width:100%;">Current Entries</h2>';
+        echo '<h2>Current Entries</h2>
+                <div class="anne">
+                    <h3>Month</h3>
+                    <h3>Name</h3>
+                    <h3>Amount</h3>';
             if ($result->num_rows > 0) {
                 // output data of each row
                 while($row = $result->fetch_assoc()) {
-
-                    echo '<div class="anne"><p>'.$row["drawingMonth"].'</p><p>'.$row["name"].'</p><p>'.$row["guess"].'</p></div>';
+                    echo '<p>'.$row["drawingMonth"].'</p><p>'.$row["name"].'</p><p>'.$row["guess"].'</p>';
                 }
                 mysqli_data_seek($result ,0);
             } else {
