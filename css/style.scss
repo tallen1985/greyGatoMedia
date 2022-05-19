@@ -35,10 +35,12 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   @include tablet {
     position: absolute;
     bottom: 25px;
     left: 25px;
+    text-align: left;
   }
   font-size: 3rem;
   font-family: "Arvo", serif;
