@@ -1,5 +1,5 @@
 <?php 
-$pageTitle = 'Closest to the Pole!'
+$pageTitle = 'Closest to the Pole!';
 include 'databaseConnect.php';
 include '../header.php';
 
