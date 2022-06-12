@@ -21,8 +21,8 @@ function decideMonth ($currentDate) {
 
 
 if (isset($_POST['submitBtn'])) {
-    $newName = $_POST['newName'];
-    $newGuess = $_POST['newGuess'];
+    $newName = trim($_POST['newName']);
+    $newGuess = trim($_POST['newGuess']);
     $drawingMonth = decideMonth(date('d'));
     
     if ((strtolower($newName) == 'anne') && (strtolower($newGuess) == 'thomas')) {
