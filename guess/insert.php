@@ -6,7 +6,7 @@ include '../header.php';
 $anne = false;
 function decideMonth ($currentDate) {
     $currentMonth = date('m');
-    if ($currentDate > 15) {
+    if ($currentDate > 20) {
         $currentMonth++;
     } 
 
